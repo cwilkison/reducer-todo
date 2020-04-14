@@ -6,7 +6,7 @@ export const Todo = props => {
     props.dispatch({type: "TOGGLE", payload: props.id})
   } 
   return (
-    <div onClick={handleToggle}>
+    <div onClick={handleToggle} className={props.state.completed ? "completed" : ""}>
       {props.state.item}
     </div>
     );
